@@ -3,9 +3,10 @@
   hosts: routers
   gather_facts: false
   tasks:
-    - name: Get "ip address print"
-      community.routeros.api:
-        path: ip address
+    - name: Run command
+      community.routeros.command:
+        commands:
+          - /system resource print
       register: print_path
     - name: Print the result
       ansible.builtin.debug:
