@@ -1,3 +1,4 @@
+#Create Survey Variables with usr-name and pword. Set hosts to router group appropriately
 ---
 - name: "Find and set the user password with supplied info"
   hosts: routers
