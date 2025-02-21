@@ -10,4 +10,4 @@
       register: print_path
     - name: Print the result
       ansible.builtin.debug:
-        var: print_path.msg
+      var: system_resource_print.stdout_lines
