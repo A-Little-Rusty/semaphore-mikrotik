@@ -11,3 +11,8 @@
     - name: Print its output
       ansible.builtin.debug:
         var: ip_address_print.stdout_lines
+
+    - name: Retrieve facts
+      community.routeros.facts:
+    - ansible.builtin.debug:
+        msg: "First IP address: {{ ansible_net_all_ipv4_addresses[0] }}"
