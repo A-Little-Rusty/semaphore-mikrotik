@@ -1,7 +1,8 @@
 ---
 - name: Find and set the user password with supplied info
-   gather_facts: false
-   tasks:
+  hosts: routers
+  gather_facts: false
+  tasks:
     - name: Run command
       community.routeros_command:
         commands:
