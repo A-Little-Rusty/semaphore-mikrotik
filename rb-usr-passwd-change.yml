@@ -1,7 +1,8 @@
 ---
-- name: Find and set the user password with supplied info
-  gather_facts: false
-  tasks:
+ - name: Find and set the user password with supplied info
+   hosts: router
+   gather_facts: false
+   tasks:
     community.routeros_command:
       commands:
         - "/user set [/user find where name={{ usr_name }}] password={{ pword }}"
