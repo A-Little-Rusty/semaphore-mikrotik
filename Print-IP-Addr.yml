@@ -1,5 +1,5 @@
 ---
-- name: RouterOS test with network_cli connection
+- name: RouterOS print IP addresses
   hosts: routers
   gather_facts: false
   tasks:
