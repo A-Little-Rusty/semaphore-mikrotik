@@ -7,7 +7,7 @@
       community.routeros.command:
         commands:
           - /system resource print
-          register: ip_address_print
+      register: ip_address_print
     - name: Print its output
       ansible.builtin.debug:
         var: ip_address_print.stdout_lines
