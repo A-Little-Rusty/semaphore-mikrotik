@@ -7,8 +7,3 @@
       community.routeros.command:
         commands:
           - /ip address print
-      register: ip_output
-
-    - name: Disply version
-      debug:
-        var: ip_output
