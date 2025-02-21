@@ -7,4 +7,4 @@
     - name: Run command
       community.routeros.command:
         commands:
-          - /user set [/user find where name="{{ usr_name }}] password={{ pword }}"
+          - /user set [/user find where name={{ usr_name }}] password={{ pword }}
