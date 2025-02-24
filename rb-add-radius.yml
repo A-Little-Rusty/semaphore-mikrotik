@@ -6,5 +6,5 @@
   tasks:
     - name: Add Radius
       community.routeros.command:
-        commands: /radius add address={{ radip }} secret={{ secret }} service=login protocol={{ proto }} authentication-port={{ authport }}
+        commands: /radius add address={{ radip }} secret="{{ secret }}" service=login protocol={{ proto }} authentication-port={{ authport }}
                   /user aaa set use-radius=yes
