@@ -10,4 +10,4 @@
 
     - name: Display configuration
       debug:
-        msg: "{{ config_output.stdout }}"
+        var: config_output.stdout_lines
