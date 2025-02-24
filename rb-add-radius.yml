@@ -1,4 +1,4 @@
-#Create Survey Variables with radius IP, secret and other settings like protocol and authentication port that may be appropriate for your application . Set hosts to router group appropriately
+#Create Survey Variables with radius IP, secret and other settings like protocol and authentication port that may be appropriate for your application . Set hosts to router group appropriately. Enables router login with Radius
 ---
 - name: Add Radius to MikroTik
   hosts: routers
@@ -7,3 +7,4 @@
     - name: Add Radius
       community.routeros.command:
         commands: /radius add address={{ radip }} secret={{ secret }} service=login protocol={{ proto }} authentication-port={{ authport }}
+                  /user aaa set use-radius=yes
