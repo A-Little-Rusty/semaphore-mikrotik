@@ -2,6 +2,6 @@
 ---
 - name: "Collect all facts from the device"
   hosts: routers
-   Tasks:
+   tasks:
   community.routeros.facts:
     gather_subset: all
