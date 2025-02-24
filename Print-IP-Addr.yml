@@ -1,7 +1,7 @@
 #Gather IP addresses on router - Why isnt this working?
 ---
 - name: Retrieve MikroTik IP Addresses
-  hosts: mikrotik
+  hosts: routers
   gather_facts: no
   tasks:
     - name: Get IP addresses
