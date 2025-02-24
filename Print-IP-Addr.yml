@@ -1,5 +1,5 @@
 ---
-- name: RouterOS print IP addresses
+- name: "RouterOS print IP addresses"
   hosts: routers
   gather_facts: false
   tasks:
