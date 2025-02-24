@@ -1,5 +1,6 @@
+#Gather IP addresses on router - Why isnt this working?
 ---
 - name: "RouterOS print IP addresses"
   tasks:
   community.routeros.facts:
-    gather_subset: all
+    gather_subset: interfaces
