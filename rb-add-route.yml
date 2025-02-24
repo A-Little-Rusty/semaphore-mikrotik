@@ -7,3 +7,5 @@
     - name: Add route to {{ dstaddress }}
       ansible.netcommon.cli_command:
         command: /ip route add dst-address={{ dstaddress }} gateway={{ gateway }}
+        /ip route print
+        
