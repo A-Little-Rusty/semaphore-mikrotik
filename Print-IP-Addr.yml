@@ -3,4 +3,4 @@
 - name: "RouterOS print IP addresses"
   tasks:
   community.routeros.facts:
-    gather_subset: interfaces
+    gather_subset: ansible_net_all_ipv4_addresses
