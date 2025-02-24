@@ -1,0 +1,14 @@
+---
+- name: Backup MikroTik Configuration
+  hosts: routers
+  gather_facts: no
+  tasks:
+    - name: Pull configuration from MikroTik
+      ansible.netcommon.cli_command:
+        command: /export
+      register: config_output
+
+    - name: Save configuration to a local file
+      copy:
+        content: "{{ config_output.stdout }}"
+        dest: "./mikrotik_backup.rsc"
