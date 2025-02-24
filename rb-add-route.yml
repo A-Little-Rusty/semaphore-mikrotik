@@ -6,4 +6,4 @@
   tasks:
     - name: Add route to {{ dstaddress }}
       community.routeros.command:
-        command: /ip route add dst-address={{ dstaddress }} gateway={{ gateway }}
+        commands: /ip route add dst-address={{ dstaddress }} gateway={{ gateway }}
