@@ -3,5 +3,5 @@
   hosts: routers
   tasks:
   - name: Run command
-     community.routeros.facts:
-       gather_subset: all
+    community.routeros.facts:
+      gather_subset: all
