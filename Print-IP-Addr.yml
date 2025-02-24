@@ -1,4 +1,4 @@
-#Gather IP addresses on router - Why isnt this working?
+#Gather IP addresses on router - Why isnt this displaying the IPs?
 ---
 - name: Retrieve MikroTik IP Addresses
   hosts: routers
