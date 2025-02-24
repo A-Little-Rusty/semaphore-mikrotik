@@ -2,5 +2,5 @@
 - name: "RouterOS print IP addresses"
   hosts: routers
   tasks:
-    community.routeros.facts:
-      gather_subset: all
+  community.routeros.facts:
+    gather_subset: all
