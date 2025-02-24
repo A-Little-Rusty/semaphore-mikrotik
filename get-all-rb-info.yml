@@ -1,6 +1,13 @@
-#Gather all info from RB - Why isnt this working
 ---
-- name: "Collect all facts from the device"
-  hosts: routers
-  community.routeros.facts:
-    gather_subset: all
+- name: Backup MikroTik Configuration
+  hosts: mikrotik
+  gather_facts: no
+  tasks:
+    - name: Pull configuration from MikroTik
+      ansible.netcommon.cli_command:
+        command: /export
+      register: config_output
+
+    - name: Display configuration
+      debug:
+        msg: "{{ config_output.stdout }}"
