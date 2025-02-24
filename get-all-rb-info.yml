@@ -1,6 +1,6 @@
 ---
 - name: Backup MikroTik Configuration
-  hosts: mikrotik
+  hosts: routers
   gather_facts: no
   tasks:
     - name: Pull configuration from MikroTik
