@@ -11,4 +11,4 @@
 
     - name: Display IP addresses
       debug:
-        msg: "{{ ip_output.stdout }}"
+        var: ip_output.stdout_lines
