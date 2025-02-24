@@ -1,9 +1,9 @@
-#Create Survey Variables with dst-address and gayeway. Set hosts to router group appropriately
+#Create Survey Variables with dstaddress and gayeway. Set hosts to router group appropriately
 ---
 - name: Add Routes to MikroTik
   hosts: routers
   gather_facts: no
   tasks:
-    - name: Add route to {{ dst-address }}
+    - name: Add route to {{ dstaddress }}
       ansible.netcommon.cli_command:
-        command: /ip route add dst-address={{ dst-address }} gateway={{ gateway }}
+        command: /ip route add dst-address={{ dstaddress }} gateway={{ gateway }}
