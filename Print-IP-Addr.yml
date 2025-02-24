@@ -1,8 +1,6 @@
 ---
 - name: "RouterOS print IP addresses"
   hosts: routers
-  gather_facts: true
   tasks:
-  - name: Run command
     community.routeros.facts:
       gather_subset: all
