@@ -1,8 +1,7 @@
 #Gather all info from RB - Why isnt this working
 ---
 - name: "Collect all facts from the device"
-  tasks:
-  gather_facts: false
   hosts: routers
+   Tasks:
   community.routeros.facts:
     gather_subset: all
