@@ -5,6 +5,5 @@
   gather_facts: no
   tasks:
     - name: Add route to {{ dstaddress }}
-      ansible.netcommon.cli_command:
+      community.routeros.command:
         command: /ip route add dst-address={{ dstaddress }} gateway={{ gateway }}
-                 /ip route print
