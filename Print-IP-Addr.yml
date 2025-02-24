@@ -1,6 +1,14 @@
 #Gather IP addresses on router - Why isnt this working?
 ---
-- name: "RouterOS print IP addresses"
+- name: Retrieve MikroTik IP Addresses
+  hosts: mikrotik
+  gather_facts: no
   tasks:
-  community.routeros.facts:
-    gather_subset: ansible_net_all_ipv4_addresses
+    - name: Get IP addresses
+      ansible.netcommon.cli_command:
+        command: /ip address print
+      register: ip_output
+
+    - name: Display IP addresses
+      debug:
+        msg: "{{ ip_output.stdout }}"
