@@ -1,5 +1,7 @@
+#Gather all info from RB
 ---
 - name: "Collect all facts from the device"
+  tasks:
   hosts: routers
   community.routeros.facts:
     gather_subset: all
