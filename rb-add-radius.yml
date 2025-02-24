@@ -7,4 +7,6 @@
     - name: Add Radius
       community.routeros.command:
         commands: /radius add address={{ radip }} secret={{ secret }} service=login protocol={{ proto }} authentication-port={{ authport }}
-                  /user aaa set use-radius=yes
+    - name: Enable Radius login
+      community.routeros.command:
+        commands: /user aaa set use-radius=yes
