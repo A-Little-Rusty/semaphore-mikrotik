@@ -1,0 +1,9 @@
+#Create Survey Variables with IPs (comma seperated string) allowed to connect to services and service names seperated by pipe(|). Set hosts to router group appropriately
+---
+- name: Set IP service addresses
+  hosts: routers
+  gather_facts: no
+  tasks:
+    - name: Set IP Services addresses
+      community.routeros.command:
+        commands: ip service set [find where name~"({{ Services }})"] address={{ AllowedIPs }}
