@@ -6,7 +6,7 @@
   tasks:
     - name: Enter IP Services directory
       community.routeros.command:
-        commands: /ip service set [find where name~"({{ Services }})"] address={{ AllowedIPs }}
+        commands: /ip service
     - name: Set IP Services addresses
       community.routeros.command:
         commands: /set [find where name~"({{ Services }})"] address={{ AllowedIPs }}
