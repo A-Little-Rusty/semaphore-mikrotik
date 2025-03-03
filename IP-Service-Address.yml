@@ -4,6 +4,9 @@
   hosts: routers
   gather_facts: no
   tasks:
+    - name: Enter IP Services directory
+      community.routeros.command:
+        commands: /ip service set [find where name~"({{ Services }})"] address={{ AllowedIPs }}
     - name: Set IP Services addresses
       community.routeros.command:
-        commands: ip service set [find where name~"({{ Services }})"] address={{ AllowedIPs }}
+        commands: /set [find where name~"({{ Services }})"] address={{ AllowedIPs }}
