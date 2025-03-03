@@ -6,4 +6,4 @@
   tasks:
     - name: Set IP Service addresses
       community.routeros.command:
-        commands: /ip service set [find where name~({{ Services }})] address=({{ AllowedIPs | list }})
+        commands: /ip service set [find where name~({{ Services }})] address=({{ AllowedIPs | join('') }})
