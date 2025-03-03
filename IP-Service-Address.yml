@@ -1,4 +1,4 @@
-#Create Survey Variables with IPs (comma seperated string) allowed to connect to services and service names seperated by pipe(|). Set hosts to router group appropriately
+#Create Survey Variables with IPs (comma seperated string) allowed to connect to services and service names separated by pipe(|). Set hosts to router group appropriately
 ---
 - name: Set IP service addresses
   hosts: routers
