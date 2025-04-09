@@ -9,3 +9,5 @@
       community.routeros.command:
         commands:
           - /system logging action set [find name=remote] remote={{ logsrv }}
+          - /add action=remote topics=info
+          - /add action=remote topics=system
