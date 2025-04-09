@@ -1,0 +1,11 @@
+#Create Survey Variables with logsrv. Set hosts to router group appropriately
+---
+- name: "Set remote logging server IP"
+  hosts: routers
+  vars:
+  gather_facts: false
+  tasks:
+    - name: Run command
+      community.routeros.command:
+        commands:
+          - /system logging action set [find name=remote] remote={{ logsrv }}
