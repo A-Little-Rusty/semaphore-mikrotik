@@ -1,6 +1,6 @@
 #Create Survey Variables with usr-name and pword and grp. Set hosts to router group appropriately
 ---
-- name: "Find and set the user password with supplied info"
+- name: "Create the user password with supplied info"
   hosts: routers
   vars:
   gather_facts: false
